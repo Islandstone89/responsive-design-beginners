@@ -1,0 +1,22 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    @media (width > 45rem) {
+        background-color: yellow;
+    }
+
+    :is(&__main, &__sidebar) {
+        padding: 2.5rem;
+    }
+
+    &__main {
+        background-colors: red;
+    }
+
+    &__sidebar {
+        background-colors: green;
+    }
+}
