@@ -3,7 +3,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem;
-    max-width: 60rem;
+    /* max-width: 60rem; */
+    width: min(100% - 4rem, 60rem);
     margin-inline: auto;
 
     @media (width > 45rem) {
