@@ -35,12 +35,17 @@ p {
   grid-template-columns: 1fr;
   gap: 2.5rem;
 }
+@media (width > 45rem) {
+  .grid {
+    background-color: yellow;
+  }
+}
 :is(.grid__main, .grid__sidebar) {
   padding: 2.5rem;
 }
 .grid__main {
-  background-color: red;
+  background-colors: red;
 }
 .grid__sidebar {
-  background-color: green;
+  background-colors: green;
 }/*# sourceMappingURL=style.css.map */
