@@ -38,7 +38,7 @@ p {
   width: min(100% - 4rem, 60rem);
   margin-inline: auto;
 }
-@media (width > 45rem) {
+@media (width > 56.25em) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -51,4 +51,9 @@ p {
 }
 .grid__sidebar {
   background-color: green;
+}
+@media (width < 43.7485em) {
+  .grid__sidebar {
+    background-color: orange;
+  }
 }/*# sourceMappingURL=style.css.map */

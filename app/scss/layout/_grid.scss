@@ -1,3 +1,4 @@
+
 @use '../util' as u;
 
 .grid {
@@ -8,7 +9,9 @@
     width: min(100% - 4rem, 60rem);
     margin-inline: auto;
 
-    @include breakpoint(large);
+    @include u.breakpoint(large) {
+        grid-template-columns: 1fr 1fr;
+    }
 
     :is(&__main, &__sidebar) {
         padding: 2.5rem;
@@ -20,5 +23,9 @@
 
     &__sidebar {
         background-color: green;
+
+        @include u.breakpoint-down(small) {
+            background-color: orange;
+        }
     }
 }
