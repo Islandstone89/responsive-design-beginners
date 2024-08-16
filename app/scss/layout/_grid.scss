@@ -1,3 +1,4 @@
+@use '../util' as u;
 
 .grid {
     display: grid;
@@ -7,9 +8,7 @@
     width: min(100% - 4rem, 60rem);
     margin-inline: auto;
 
-    @media (width > 45rem) {
-        grid-template-columns: 1fr 1fr;
-    }
+    @include breakpoint(large);
 
     :is(&__main, &__sidebar) {
         padding: 2.5rem;
