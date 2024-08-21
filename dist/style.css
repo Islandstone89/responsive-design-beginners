@@ -49,7 +49,7 @@ p {
 }
 @media (width > 56.25em) {
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
 }
 :is(.grid__main, .grid__sidebar) {
@@ -59,10 +59,19 @@ p {
   background-color: red;
 }
 .grid__sidebar {
-  background-color: green;
+  background-color: magenta;
 }
 @media (width < 43.7485em) {
   .grid__sidebar {
     background-color: orange;
   }
+}
+.grid__widget {
+  padding: 1rem;
+}
+.grid__widget--green {
+  background-color: green;
+}
+.grid__widget--blue {
+  background-color: blue;
 }/*# sourceMappingURL=style.css.map */

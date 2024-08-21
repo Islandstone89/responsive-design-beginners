@@ -10,7 +10,7 @@
     margin-inline: auto;
 
     @include u.breakpoint(large) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
 
     :is(&__main, &__sidebar) {
@@ -22,10 +22,22 @@
     }
 
     &__sidebar {
-        background-color: green;
+        background-color: magenta;
 
         @include u.breakpoint-down(small) {
             background-color: orange;
+        }
+    }
+
+    &__widget {
+        padding: 1rem;
+
+        &--green {
+            background-color: green;
+        }
+
+        &--blue {
+            background-color: blue;
         }
     }
 }
