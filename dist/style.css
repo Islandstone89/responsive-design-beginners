@@ -15,6 +15,34 @@ body {
   font-weight: 400;
   background-color: var(--background-color);
   color: var(--text-color);
+  position: relative;
+}
+
+.visually-hidden {
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-link {
+  background-color: red;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skip-link:not(:focus, :active) {
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
 }
 
 :root {

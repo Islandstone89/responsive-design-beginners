@@ -17,17 +17,46 @@
     <title>Mythos</title>
 </head>
 <body>
-    <header class="header">
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+      <h2 class="visually-hidden">Header</h2>
+      <div class="wrapper">
+        <a href="/" class="header__link">
+            <img src="img/logo-mythos.svg" alt="Mythos homepage">
+        </a>
+        <nav class="navbar">
+            <ul class="navbar__list">
+
+                <li class="navbar__item">
+                    <a href="/">Features</a>
+                </li>
+
+                <li class="navbar__item">
+                    <a href="/">Pricing</a>
+                </li>
+            
+                <li class="navbar__item">
+                    <a href="/">About</a>
+                </li>
+
+            </ul><!-- end navbar__list -->
+        </nav><!-- end navbar -->
+      </div><!-- end wrapper -->
     </header><!-- end header -->
     
-    <main class="main">
+    <main class="main" id="main-content">
         <article>
-            <section class="wrapper" aria-labelledby="main-heading">
-                <h1 id="main-heading">Find that elusive unicorn.</h1>
+            <section class="wrapper hero" aria-labelledby="main-heading">
+                <h1 id="main-heading" class="hero__heading">Find that elusive unicorn.</h1>
                 <p>Mythos will enable you to discover the newest startups to invest in. Powered by AI, used by millions of humans.</p>
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aspernatur eligendi eos dicta saepe ea, omnis animi eaque alias error.</h2>
-            </section>
+                <div class="hero__links">
+                    <a href="/" class="hero__link">Free Trial</a>
+                    <a href="/" class="hero__link">Pricing</a>
+                </div><!-- end hero__links -->
+            </section><!-- end hero -->
         </article>
     </main><!-- end main -->
 
