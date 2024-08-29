@@ -22,3 +22,9 @@ $breakpoints-down: (
         @content;
     }
 }
+
+@use 'sass:math' as math;
+
+@function rem($pixel) {
+    @return math.div($pixel, 16) + rem;
+}
