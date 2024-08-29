@@ -1,4 +1,6 @@
 
+/* UTILITIES */
+
 $breakpoints-up: (
     "medium": 43.75em,
     "large": 56.25em,
@@ -23,8 +25,38 @@ $breakpoints-down: (
     }
 }
 
-@use 'sass:math' as math;
+.visually-hidden {
+    clip-path: inset(50%);
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+}
 
-@function rem($pixel) {
-    @return math.div($pixel, 16) + rem;
+.wrapper {
+    --max-width: 75rem;
+    --inline-padding: .75rem;
+    width: min(100% - var(--inline-padding) * 2, var(--max-width));
+    margin-inline: auto;
+
+    @include breakpoint(medium) {
+        --inline-padding: 1.5rem;
+    }
+}
+
+.flow {
+    --flow-space: 1rem;
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1rem);
+}
+
+.text-light {
+    color: var(--text-light);
+}
+
+.uppercase {
+    text-transform: uppercase;
 }

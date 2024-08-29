@@ -1,4 +1,6 @@
 
+/* CSS RESET */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -23,6 +25,8 @@ figure, blockquote, dl, dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -56,6 +60,7 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 /* Inherit fonts for inputs and buttons */

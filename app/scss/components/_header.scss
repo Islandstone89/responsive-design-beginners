@@ -1,6 +1,69 @@
 
-@use '../util' as u;
+@use '../globals/utilities' as u;
+@use '../globals/fonts' as font;
+
+.skip-link {
+    background-color: red;
+    padding: .5em 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:not(:focus, :active) {
+    clip-path: inset(50%);
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    }
+}
 
 .header {
     background-color: var(--hero-bg);
+    padding-block: 12px;
+
+    @include u.breakpoint(large) {
+        padding-block: 20px;
+    }
+}
+
+.logo {
+    width: 4.375rem;
+
+    @include u.breakpoint(large) {
+        width: 8rem;
+    }
+
+    &:is(:hover) {
+        opacity: .9;
+        transition: ease-in .25s;
+    }
+}
+
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: clamp(1rem, 0.95rem + 0.22vw, 1.125rem);
+    letter-spacing: .05em;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include u.breakpoint(large) {
+        gap: 40px;
+    }
+}
+
+.navbar__item {
+    &:is(:hover) {
+        opacity: .9;
+        transition: ease-in .25s;
+        text-decoration: underline;
+    }
 }

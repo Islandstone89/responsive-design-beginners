@@ -1,9 +1,8 @@
 
-@use '../util' as u;
+@use '_utilities.scss' as u;
+@use '_fonts.scss' as font;
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+/* BASE STYLES */
 
 body {
     margin: 0;
@@ -15,43 +14,6 @@ body {
     position: relative;
 }
 
-.visually-hidden {
-    clip-path: inset(50%);
-    position: absolute;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-}
-
-.skip-link {
-    background-color: red;
-    padding: .5em 1em;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    &:not(:focus, :active) {
-    clip-path: inset(50%);
-    position: absolute;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    }
-}
-
-
-:root {
-    --ff-primary: 'Source Sans 3', sans-serif;
-}
-
-:is(h1, h2, h3) {
-    font-weight: 700;
-    line-height: 1.1;
-    margin-block-start: 0;
-}
-
 h1 {
     font-size: clamp(2.625rem, 1.94rem + 3.40vw, 4.5rem);
 }
@@ -60,12 +22,3 @@ h2 {
     font-size: clamp(2.25rem, 1.97rem + 1.38vw, 3rem);
 }
 
-p {
-    margin-block-start: 0;
-    font-size: 16px;
-}
-
-:is(a, a:visited, a:active) {
-    text-decoration: none;
-    color: currentColor;
-}
