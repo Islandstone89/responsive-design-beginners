@@ -30,15 +30,15 @@
             <ul class="navbar__list" role="list">
 
                 <li class="navbar__item">
-                    <a href="/">Features</a>
+                    <a href="/" class="navbar__link">Features</a>
                 </li>
 
                 <li class="navbar__item">
-                    <a href="/">Pricing</a>
+                    <a href="/" class="navbar__link">Pricing</a>
                 </li>
             
                 <li class="navbar__item">
-                    <a href="/">About</a>
+                    <a href="/" class="navbar__link">About</a>
                 </li>
 
             </ul><!-- end navbar__list -->
@@ -48,14 +48,18 @@
     
     <main class="main" id="main-content">
         <article>
-            <section class="wrapper hero" aria-labelledby="main-heading">
-                <h1 id="main-heading" class="hero__heading">Find that elusive unicorn.</h1>
-                <p>Mythos will enable you to discover the newest startups to invest in. Powered by AI, used by millions of humans.</p>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aspernatur eligendi eos dicta saepe ea, omnis animi eaque alias error.</h2>
-                <div class="hero__links">
-                    <a href="/" class="hero__link">Free Trial</a>
-                    <a href="/" class="hero__link">Pricing</a>
-                </div><!-- end hero__links -->
+            <section class="hero text-light" aria-labelledby="main-heading">
+                <div class="wrapper hero__wrapper">
+                    <img src="img/unicorn.svg" alt="Unicorn with stars." class="hero__image" width="483" height="486">
+                    <div class="hero__text flow">
+                        <h1 id="hero__title" class="hero__heading">Find that elusive unicorn.</h1>
+                        <p>Mythos will enable you to discover the newest startups to invest in. Powered by AI, used by millions of humans.</p>
+                        <div class="hero__links">
+                            <a href="/" class="hero__link uppercase">Free Trial</a>
+                            <a href="/" class="hero__link uppercase">Pricing</a>
+                    </div><!-- end hero__links -->
+                </div><!-- end hero__text -->
+                </div><!-- end wrapper -->
             </section><!-- end hero -->
         </article>
     </main><!-- end main -->

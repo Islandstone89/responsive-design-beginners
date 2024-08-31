@@ -46,7 +46,7 @@ $breakpoints-down: (
 }
 
 .flow {
-    --flow-space: 1rem;
+    --flow-space: var(--space-md);
 }
 
 .flow > * + * {

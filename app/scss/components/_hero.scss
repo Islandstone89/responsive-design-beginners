@@ -1,0 +1,10 @@
+
+@use '../globals/utilities' as u;
+
+.hero {
+    background-color: var(--bg-2);
+}
+
+.hero__links {
+    --flow-space: var(--space-lg);
+}

@@ -3,7 +3,7 @@
 @use '../globals/fonts' as font;
 
 .skip-link {
-    background-color: red;
+    background-color: transparent;
     padding: .5em 1em;
     position: absolute;
     top: 0;
@@ -20,7 +20,7 @@
 }
 
 .header {
-    background-color: var(--hero-bg);
+    background-color: var(--bg-2);
     padding-block: 12px;
 
     @include u.breakpoint(large) {
@@ -60,10 +60,11 @@
     }
 }
 
-.navbar__item {
-    &:is(:hover) {
+.navbar__link {
+    &:is(:hover, :focus-visible) {
         opacity: .9;
         transition: ease-in .25s;
         text-decoration: underline;
+        text-underline-offset: 3px;
     }
 }
