@@ -98,6 +98,8 @@ textarea:not([rows]) {
   --clr-magenta: hsl(320, 85%, 41%);
   --clr-aqua: hsl(180, 100%, 42%);
   --ff-sans-serif: "Source Sans 3", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
   --size-10: .625rem;
   --size-16: 1rem;
   --size-18: 1.125rem;
@@ -129,6 +131,8 @@ textarea:not([rows]) {
   --fs-900: var(--size-42);
   --fs-1000: var(--size-48);
   --fs-1100: var(--size-72);
+  --fw-regular: var(var(--fw-400));
+  --fw-bold: var(--fw-700);
   --space-sm: var(--size-10);
   --space-md: var(--size-20);
   --space-lg: var(--size-40);
@@ -182,6 +186,10 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   position: relative;
+}
+
+:is(h1, h2, h3) {
+  font-weight: var(--fw-bold);
 }
 
 h1 {

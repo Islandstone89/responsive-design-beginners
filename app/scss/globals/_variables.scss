@@ -11,6 +11,8 @@
     --clr-aqua: hsl(180, 100%, 42%);
 
     --ff-sans-serif: 'Source Sans 3', sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
 
     --size-10: .625rem;
     --size-16: 1rem;
@@ -47,6 +49,9 @@
     --fs-900: var(--size-42);
     --fs-1000: var(--size-48);
     --fs-1100: var(--size-72);
+
+    --fw-regular: var(var(--fw-400));
+    --fw-bold: var(--fw-700);
 
     --space-sm: var(--size-10);
     --space-md: var(--size-20);
