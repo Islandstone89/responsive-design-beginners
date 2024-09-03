@@ -42,14 +42,8 @@
 }
 
 .hero__links {
-    --flow-space: var(--space-lg);
+    --flow-space: var(--space-500);
     display: flex;
     gap: 20px;
 }
 
-.hero__link {
-    background-color: yellow;
-    padding: .66em .88em;
-    border-radius: 20px;
-    outline: 2px solid red;
-}

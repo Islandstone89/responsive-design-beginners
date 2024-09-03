@@ -46,18 +46,14 @@ $breakpoints-down: (
 }
 
 .flow {
-    --flow-space: var(--space-md);
+    --flow-space: var(--space-400);
 }
 
 .flow > * + * {
     margin-block-start: var(--flow-space, 1rem);
 }
 
-.text-light {
-    color: var(--text-light);
-}
-
-.uppercase {
-    text-transform: uppercase;
+.light {
+    color: var(--clr-light);
 }
 

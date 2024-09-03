@@ -101,6 +101,7 @@ textarea:not([rows]) {
   --fw-400: 400;
   --fw-700: 700;
   --size-10: .625rem;
+  --size-12: .75rem;
   --size-16: 1rem;
   --size-18: 1.125rem;
   --size-20: 1.25rem;
@@ -117,8 +118,8 @@ textarea:not([rows]) {
   --bg-2: var(--clr-blue);
   --bg-3: var(--clr-magenta);
   --clr-accent: var(--clr-aqua);
-  --text-dark: var(--clr-dark-grey);
-  --text-light: var(--clr-white);
+  --clr-dark: var(--clr-dark-grey);
+  --clr-light: var(--clr-white);
   --ff-primary: var(--ff-sans-serif);
   --fs-100: var(--size-16);
   --fs-200: var(--size-18);
@@ -133,9 +134,11 @@ textarea:not([rows]) {
   --fs-1100: var(--size-72);
   --fw-regular: var(var(--fw-400));
   --fw-bold: var(--fw-700);
-  --space-sm: var(--size-10);
-  --space-md: var(--size-20);
-  --space-lg: var(--size-40);
+  --space-100: var(--size-10);
+  --space-200: var(--size-12);
+  --space-300: var(--size-16);
+  --space-400: var(--size-20);
+  --space-500: var(--size-40);
 }
 
 /* UTILITIES */
@@ -162,19 +165,15 @@ textarea:not([rows]) {
 }
 
 .flow {
-  --flow-space: var(--space-md);
+  --flow-space: var(--space-400);
 }
 
 .flow > * + * {
   margin-block-start: var(--flow-space, 1rem);
 }
 
-.text-light {
-  color: var(--text-light);
-}
-
-.uppercase {
-  text-transform: uppercase;
+.light {
+  color: var(--clr-light);
 }
 
 /* BASE STYLES */
@@ -185,7 +184,6 @@ body {
   font-size: var(--fs-200);
   font-weight: 400;
   background-color: var(--background-color);
-  color: var(--text-color);
   position: relative;
 }
 
@@ -199,6 +197,35 @@ h1 {
 
 h2 {
   font-size: clamp(2.25rem, 1.97rem + 1.38vw, 3rem);
+}
+
+.btn {
+  --outline-clr: var(--clr-light);
+  --bg-clr: transparent;
+  --padding-block: var(--space-200);
+  --padding-inline: var(--space-400);
+  background-color: var(--bg-clr);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--padding-block) var(--padding-inline);
+  border-radius: 20px;
+  outline: 2px solid var(--outline-clr);
+  font-weight: var(--fw-bold);
+  transition: ease-in-out 0.25s;
+}
+
+.btn__primary {
+  --outline-clr: var(--clr-accent);
+  --bg-clr: var(--clr-accent);
+  color: initial;
+}
+.btn__primary:is(:hover, :focus-visible) {
+  opacity: 0.9;
+}
+
+.btn__secondary:is(:hover, :focus-visible) {
+  --bg-clr: var(--clr-light);
+  color: var(--bg-2);
 }
 
 .skip-link {
@@ -222,6 +249,7 @@ h2 {
   background-color: var(--bg-2);
   padding-block: 12px;
   font-size: var(--fs-100);
+  text-transform: uppercase;
 }
 @media (width > 56.25rem) {
   .header {
@@ -306,14 +334,7 @@ h2 {
 }
 
 .hero__links {
-  --flow-space: var(--space-lg);
+  --flow-space: var(--space-500);
   display: flex;
   gap: 20px;
-}
-
-.hero__link {
-  background-color: yellow;
-  padding: 0.66em 0.88em;
-  border-radius: 20px;
-  outline: 2px solid red;
 }/*# sourceMappingURL=style.css.map */

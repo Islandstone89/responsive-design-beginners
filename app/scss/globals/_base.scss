@@ -11,7 +11,6 @@ body {
     font-size: var(--fs-200);
     font-weight: 400;
     background-color: var(--background-color);
-    color:(var(--text-color));
     position: relative;
 }
 
@@ -26,4 +25,38 @@ h1 {
 h2 {
     font-size: clamp(2.25rem, 1.97rem + 1.38vw, 3rem);
 }
+
+.btn {
+    --outline-clr: var(--clr-light);
+    --bg-clr: transparent;
+    --padding-block: var(--space-200);
+    --padding-inline: var(--space-400);
+    background-color: var(--bg-clr);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: var(--padding-block) var(--padding-inline);
+    border-radius: 20px;
+    outline: 2px solid var(--outline-clr);
+    font-weight: var(--fw-bold);
+    transition: ease-in-out .25s;
+}
+
+.btn__primary {
+    --outline-clr: var(--clr-accent);
+    --bg-clr: var(--clr-accent);
+    color: initial;
+
+    &:is(:hover, :focus-visible) {
+        opacity: .9;
+    }
+}
+
+.btn__secondary {
+    &:is(:hover, :focus-visible) {
+        --bg-clr: var(--clr-light);
+        color: var(--bg-2);
+    }
+}
+
+
 
