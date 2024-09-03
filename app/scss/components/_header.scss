@@ -22,6 +22,7 @@
 .header {
     background-color: var(--bg-2);
     padding-block: 12px;
+    font-size: var(--fs-100);
 
     @include u.breakpoint(large) {
         padding-block: 20px;

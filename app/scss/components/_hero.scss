@@ -5,6 +5,51 @@
     background-color: var(--bg-2);
 }
 
+.hero__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    grid-template-areas: 
+    "image"
+    "text"
+    ;
+    padding-block: 30px 60px;
+
+    @include u.breakpoint(large) {
+        grid-template-columns: 1fr 1fr;
+        gap: 120px;
+        grid-template-areas: 
+        "text image"
+        ;
+        padding-block: 40px 80px;
+    }
+}
+
+.hero__image {
+    grid-area: image;
+}
+
+.hero__text {
+    grid-area: text;
+}
+
+.hero__heading {
+    font-size: clamp(2.625rem, 1.94rem + 3.41vw, 4.5rem);
+}
+
+.hero__intro {
+    font-size: clamp(1.5rem, 1.41rem + 0.45vw, 1.75rem);
+}
+
 .hero__links {
     --flow-space: var(--space-lg);
+    display: flex;
+    gap: 20px;
+}
+
+.hero__link {
+    background-color: yellow;
+    padding: .66em .88em;
+    border-radius: 20px;
+    outline: 2px solid red;
 }
