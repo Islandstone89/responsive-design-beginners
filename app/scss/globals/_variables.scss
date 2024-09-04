@@ -16,6 +16,7 @@
 
     --size-10: .625rem;
     --size-12: .75rem;
+    --size-14: .875rem;
     --size-16: 1rem;
     --size-18: 1.125rem;
     --size-20: 1.25rem;
@@ -39,19 +40,20 @@
 
     --ff-primary: var(--ff-sans-serif);
 
-    --fs-100: var(--size-16);
-    --fs-200: var(--size-18);
-    --fs-300: var(--size-20);
-    --fs-400: var(--size-22);
-    --fs-500: var(--size-24);
-    --fs-600: var(--size-28);
-    --fs-700: var(--size-36);
-    --fs-800: var(--size-40):
-    --fs-900: var(--size-42);
-    --fs-1000: var(--size-48);
-    --fs-1100: var(--size-72);
+    --fs-100: var(--size-14);
+    --fs-200: var(--size-16);
+    --fs-300: var(--size-18);
+    --fs-400: var(--size-20);
+    --fs-500: var(--size-22);
+    --fs-600: var(--size-24);
+    --fs-700: var(--size-28);
+    --fs-800: var(--size-36);
+    --fs-900: var(--size-40);
+    --fs-1000: var(--size-42);
+    --fs-1100: var(--size-48);
+    --fs-1200: var(--size-72);
 
-    --fw-regular: var(var(--fw-400));
+    --fw-regular: var(--fw-400);
     --fw-bold: var(--fw-700);
 
     --space-100: var(--size-10);

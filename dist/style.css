@@ -102,6 +102,7 @@ textarea:not([rows]) {
   --fw-700: 700;
   --size-10: .625rem;
   --size-12: .75rem;
+  --size-14: .875rem;
   --size-16: 1rem;
   --size-18: 1.125rem;
   --size-20: 1.25rem;
@@ -121,18 +122,19 @@ textarea:not([rows]) {
   --clr-dark: var(--clr-dark-grey);
   --clr-light: var(--clr-white);
   --ff-primary: var(--ff-sans-serif);
-  --fs-100: var(--size-16);
-  --fs-200: var(--size-18);
-  --fs-300: var(--size-20);
-  --fs-400: var(--size-22);
-  --fs-500: var(--size-24);
-  --fs-600: var(--size-28);
-  --fs-700: var(--size-36);
-  --fs-800: var(--size-40):
-  --fs-900: var(--size-42);
-  --fs-1000: var(--size-48);
-  --fs-1100: var(--size-72);
-  --fw-regular: var(var(--fw-400));
+  --fs-100: var(--size-14);
+  --fs-200: var(--size-16);
+  --fs-300: var(--size-18);
+  --fs-400: var(--size-20);
+  --fs-500: var(--size-22);
+  --fs-600: var(--size-24);
+  --fs-700: var(--size-28);
+  --fs-800: var(--size-36);
+  --fs-900: var(--size-40);
+  --fs-1000: var(--size-42);
+  --fs-1100: var(--size-48);
+  --fs-1200: var(--size-72);
+  --fw-regular: var(--fw-400);
   --fw-bold: var(--fw-700);
   --space-100: var(--size-10);
   --space-200: var(--size-12);
@@ -248,8 +250,9 @@ h2 {
 .header {
   background-color: var(--bg-2);
   padding-block: 12px;
-  font-size: var(--fs-100);
   text-transform: uppercase;
+  font-size: clamp(var(--fs-100), 0.84rem + 0.18vw, var(--fs-200));
+  letter-spacing: 0.05em;
 }
 @media (width > 56.25rem) {
   .header {
@@ -275,8 +278,6 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  font-size: clamp(1rem, 0.95rem + 0.22vw, 1.125rem);
-  letter-spacing: 0.05em;
 }
 
 .navbar__list {
@@ -304,6 +305,7 @@ h2 {
 .hero__wrapper {
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
   gap: 40px;
   grid-template-areas: "image" "text";
   padding-block: 30px 60px;
@@ -311,6 +313,7 @@ h2 {
 @media (width > 56.25rem) {
   .hero__wrapper {
     grid-template-columns: 1fr 1fr;
+    justify-items: initial;
     gap: 120px;
     grid-template-areas: "text image";
     padding-block: 40px 80px;
@@ -326,11 +329,11 @@ h2 {
 }
 
 .hero__heading {
-  font-size: clamp(2.625rem, 1.94rem + 3.41vw, 4.5rem);
+  font-size: clamp(var(--fs-1000), 1.94rem + 3.41vw, var(--fs-1200));
 }
 
 .hero__intro {
-  font-size: clamp(1.5rem, 1.41rem + 0.45vw, 1.75rem);
+  font-size: clamp(var(--fs-600), 1.41rem + 0.45vw, var(--fs-700));
 }
 
 .hero__links {

@@ -22,8 +22,9 @@
 .header {
     background-color: var(--bg-2);
     padding-block: 12px;
-    font-size: var(--fs-100);
     text-transform: uppercase;
+    font-size: clamp(var(--fs-100), 0.84rem + 0.18vw, var(--fs-200));
+    letter-spacing: .05em;
 
     @include u.breakpoint(large) {
         padding-block: 20px;
@@ -48,8 +49,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    font-size: clamp(1rem, 0.95rem + 0.22vw, 1.125rem);
-    letter-spacing: .05em;
 }
 
 .navbar__list {
