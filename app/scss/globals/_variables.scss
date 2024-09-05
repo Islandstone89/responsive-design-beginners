@@ -27,7 +27,9 @@
     --size-40: 2.5rem;
     --size-42: 2.625rem;
     --size-48: 3rem;
+    --size-60: 3.75rem;
     --size-72: 4.5rem;
+    --size-80: 5rem;
 
     /* SEMANTIC PROPERTIES */
 
@@ -60,5 +62,8 @@
     --space-200: var(--size-12);
     --space-300: var(--size-16);
     --space-400: var(--size-20);
-    --space-500: var(--size-40); 
+    --space-500: var(--size-24);
+    --space-600: var(--size-40); 
+    --space-700: var(--size-60);
+    --space-800: var(--size-80);
 }

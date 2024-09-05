@@ -36,12 +36,15 @@ $breakpoints-down: (
 
 .wrapper {
     --max-width: 75rem;
-    --inline-padding: .75rem;
-    width: min(100% - var(--inline-padding) * 2, var(--max-width));
+    --padding-inline: var(--space-200);
+    --padding-block: var(--space-700);
+    width: min(100% - var(--padding-inline) * 2, var(--max-width));
     margin-inline: auto;
+    padding-block: var(--padding-block);
 
     @include breakpoint(medium) {
-        --inline-padding: 1.5rem;
+        --padding-inline: var(--space-500);
+        --padding-block: var(--space-800);
     }
 }
 

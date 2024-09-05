@@ -15,7 +15,6 @@
     "image"
     "text"
     ;
-    padding-block: 30px 60px;
 
     @include u.breakpoint(large) {
         grid-template-columns: 1fr 1fr;
@@ -24,7 +23,7 @@
         grid-template-areas: 
         "text image"
         ;
-        padding-block: 40px 80px;
+
     }
 }
 

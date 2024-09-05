@@ -113,7 +113,9 @@ textarea:not([rows]) {
   --size-40: 2.5rem;
   --size-42: 2.625rem;
   --size-48: 3rem;
+  --size-60: 3.75rem;
   --size-72: 4.5rem;
+  --size-80: 5rem;
   /* SEMANTIC PROPERTIES */
   --bg-1: var(--clr-white);
   --bg-2: var(--clr-blue);
@@ -140,7 +142,10 @@ textarea:not([rows]) {
   --space-200: var(--size-12);
   --space-300: var(--size-16);
   --space-400: var(--size-20);
-  --space-500: var(--size-40);
+  --space-500: var(--size-24);
+  --space-600: var(--size-40);
+  --space-700: var(--size-60);
+  --space-800: var(--size-80);
 }
 
 /* UTILITIES */
@@ -156,13 +161,16 @@ textarea:not([rows]) {
 
 .wrapper {
   --max-width: 75rem;
-  --inline-padding: .75rem;
-  width: min(100% - var(--inline-padding) * 2, var(--max-width));
+  --padding-inline: var(--space-200);
+  --padding-block: var(--space-700);
+  width: min(100% - var(--padding-inline) * 2, var(--max-width));
   margin-inline: auto;
+  padding-block: var(--padding-block);
 }
 @media (width > 43.75rem) {
   .wrapper {
-    --inline-padding: 1.5rem;
+    --padding-inline: var(--space-500);
+    --padding-block: var(--space-800);
   }
 }
 
@@ -308,7 +316,6 @@ h2 {
   justify-items: center;
   gap: 40px;
   grid-template-areas: "image" "text";
-  padding-block: 30px 60px;
 }
 @media (width > 56.25rem) {
   .hero__wrapper {
@@ -316,7 +323,6 @@ h2 {
     justify-items: initial;
     gap: 120px;
     grid-template-areas: "text image";
-    padding-block: 40px 80px;
   }
 }
 
@@ -340,4 +346,34 @@ h2 {
   --flow-space: var(--space-500);
   display: flex;
   gap: 20px;
+}
+
+.features__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-600);
+}
+@media (width > 56.25rem) {
+  .features__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-800);
+  }
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-100);
+  text-align: center;
+}
+@media (width > 56.25rem) {
+  .features__item {
+    text-align: start;
+    align-items: start;
+  }
+}
+
+.features__text {
+  max-width: 42ch;
 }/*# sourceMappingURL=style.css.map */
