@@ -202,11 +202,11 @@ body {
 }
 
 h1 {
-  font-size: clamp(2.625rem, 1.94rem + 3.4vw, 4.5rem);
+  font-size: clamp(var(--fs-1000), 1.94rem + 3.4vw, var(--fs-1200));
 }
 
 h2 {
-  font-size: clamp(2.25rem, 1.97rem + 1.38vw, 3rem);
+  font-size: clamp(var(--fs-800), 1.97rem + 1.38vw, var(--fs-1100));
 }
 
 .btn {
@@ -376,4 +376,24 @@ h2 {
 
 .features__text {
   max-width: 42ch;
+}
+
+.fw-feature {
+  background-color: var(--bg-3);
+  text-align: center;
+}
+
+.fw-feature__text {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+@media (width > 56.25rem) {
+  .fw-feature__text {
+    text-align: start;
+  }
+}
+
+.fw-feature__image {
+  --flow-space: var(--space-600);
+  margin-inline: auto;
 }/*# sourceMappingURL=style.css.map */
