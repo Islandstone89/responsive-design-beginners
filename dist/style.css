@@ -454,4 +454,8 @@ h2 {
   --flow-space: var(--space-600);
   background-color: var(--clr-light);
   color: var(--clr-dark);
+  transition: ease-in-out 0.25s;
+}
+.fw-cta__link:is(:hover, :focus-visible) {
+  opacity: 0.9;
 }/*# sourceMappingURL=style.css.map */
