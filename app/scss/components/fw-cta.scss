@@ -1,0 +1,19 @@
+
+@use '../globals/utilities' as u;
+@use '../globals/variables' as var;
+
+.fw-cta {
+    background: linear-gradient(90deg, var(--gradient-1) 0%, var(--gradient-2) 55%, var(--gradient-3) 110%);
+    text-align: center;
+}
+
+.fw-cta__link {
+    --flow-space: var(--space-600);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    transition: ease-in-out .25s;
+
+    &:is(:hover, :focus-visible) {
+        opacity: .5;
+    }
+}

@@ -123,6 +123,9 @@ textarea:not([rows]) {
   --clr-accent: var(--clr-aqua);
   --clr-dark: var(--clr-dark-grey);
   --clr-light: var(--clr-white);
+  --gradient-1: var(--clr-dark-grey);
+  --gradient-2: var(--clr-blue);
+  --gradient-3: var(--clr-aqua);
   --ff-primary: var(--ff-sans-serif);
   --fs-100: var(--size-14);
   --fs-200: var(--size-16);
@@ -440,4 +443,15 @@ h2 {
   .testimonial__author__text {
     text-align: start;
   }
+}
+
+.fw-cta {
+  background: linear-gradient(90deg, var(--gradient-1) 0%, var(--gradient-2) 55%, var(--gradient-3) 110%);
+  text-align: center;
+}
+
+.fw-cta__link {
+  --flow-space: var(--space-600);
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
 }/*# sourceMappingURL=style.css.map */
