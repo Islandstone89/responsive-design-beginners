@@ -1,28 +1,33 @@
 
 /* UTILITIES */
 
-$breakpoints-up: (
+/* MIXINS */
+
+$breakpoints: (
     "medium": 43.75rem,
     "large": 56.25rem,
     "xlarge": 90rem,
 );
 
-$breakpoints-down: (
-    "small": 43.7485rem,
-    "medium": 56.24875rem,
-    "large": 89.99875rem,
-);
-
 @mixin breakpoint($size) {
-    @media (width > map-get($breakpoints-up, $size)) {
+    @media (width > map-get($breakpoints, $size)) {
         @content;
     }
 }
 
-@mixin breakpoint-down($size) {
-    @media (width < map-get($breakpoints-down, $size)) {
-        @content;
-    }
+
+@mixin btn($outline-color: var(--clr-light), $bg-color: transparent, $color: var(--clr-light)) {
+    --padding-block: var(--space-200);
+    --padding-inline: var(--space-400);
+    background-color: $bg-color;
+    color: $color;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: var(--padding-block) var(--padding-inline);
+    border-radius: 20px;
+    outline: 2px solid $outline-color;
+    font-weight: var(--fw-bold);
+    transition: ease-in-out .25s;
 }
 
 .visually-hidden {
@@ -59,4 +64,5 @@ $breakpoints-down: (
 .light {
     color: var(--clr-light);
 }
+
 

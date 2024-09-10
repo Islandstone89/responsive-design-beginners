@@ -152,6 +152,7 @@ textarea:not([rows]) {
 }
 
 /* UTILITIES */
+/* MIXINS */
 .visually-hidden {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
@@ -213,32 +214,71 @@ h2 {
   font-size: clamp(var(--fs-800), 1.97rem + 1.38vw, var(--fs-1100));
 }
 
-.btn {
-  --outline-clr: var(--clr-light);
-  --bg-clr: transparent;
+/* .btn {
+    --outline-clr: var(--clr-light);
+    --bg-clr: transparent;
+    --padding-block: var(--space-200);
+    --padding-inline: var(--space-400);
+    background-color: var(--bg-clr);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: var(--padding-block) var(--padding-inline);
+    border-radius: 20px;
+    outline: 2px solid var(--outline-clr);
+    font-weight: var(--fw-bold);
+    transition: ease-in-out .25s;
+}
+
+.btn__primary {
+    --outline-clr: var(--clr-accent);
+    --bg-clr: var(--clr-accent);
+    color: initial;
+
+    &:is(:hover, :focus-visible) {
+        opacity: .9;
+    }
+} */
+/* .btn {
+    @include u.btn;
+} */
+/* .btn__secondary {
+    &:is(:hover, :focus-visible) {
+        --bg-clr: var(--clr-light);
+        color: var(--bg-2);
+    }
+} */
+.btn__primary {
   --padding-block: var(--space-200);
   --padding-inline: var(--space-400);
-  background-color: var(--bg-clr);
+  background-color: var(--clr-accent);
+  color: var(--clr-dark);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: var(--padding-block) var(--padding-inline);
   border-radius: 20px;
-  outline: 2px solid var(--outline-clr);
+  outline: 2px solid var(--clr-accent);
   font-weight: var(--fw-bold);
   transition: ease-in-out 0.25s;
-}
-
-.btn__primary {
-  --outline-clr: var(--clr-accent);
-  --bg-clr: var(--clr-accent);
-  color: initial;
 }
 .btn__primary:is(:hover, :focus-visible) {
   opacity: 0.9;
 }
 
+.btn__secondary {
+  --padding-block: var(--space-200);
+  --padding-inline: var(--space-400);
+  background-color: transparent;
+  color: var(--clr-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--padding-block) var(--padding-inline);
+  border-radius: 20px;
+  outline: 2px solid var(--clr-light);
+  font-weight: var(--fw-bold);
+  transition: ease-in-out 0.25s;
+}
 .btn__secondary:is(:hover, :focus-visible) {
-  --bg-clr: var(--clr-light);
+  background-color: var(--clr-light);
   color: var(--bg-2);
 }
 
@@ -446,14 +486,37 @@ h2 {
 }
 
 .fw-cta {
-  background: linear-gradient(90deg, var(--gradient-1) 0%, var(--gradient-2) 55%, var(--gradient-3) 110%);
   text-align: center;
+  background: linear-gradient(90deg, var(--gradient-1) 0%, var(--gradient-2) 75%, var(--gradient-3) 150%);
+}
+@media (width > 56.25rem) {
+  .fw-cta {
+    background: linear-gradient(90deg, var(--gradient-1) 0%, var(--gradient-2) 55%, var(--gradient-3) 110%);
+  }
 }
 
+/* .fw-cta__link {
+    --flow-space: var(--space-600);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    transition: ease-in-out .25s;
+
+    &:is(:hover, :focus-visible) {
+        opacity: .9;
+    }
+} */
 .fw-cta__link {
   --flow-space: var(--space-600);
+  --padding-block: var(--space-200);
+  --padding-inline: var(--space-400);
   background-color: var(--clr-light);
   color: var(--clr-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--padding-block) var(--padding-inline);
+  border-radius: 20px;
+  outline: 2px solid var(--clr-light);
+  font-weight: var(--fw-bold);
   transition: ease-in-out 0.25s;
 }
 .fw-cta__link:is(:hover, :focus-visible) {

@@ -27,7 +27,7 @@ h2 {
     font-size: clamp(var(--fs-800), 1.97rem + 1.38vw, var(--fs-1100));
 }
 
-.btn {
+/* .btn {
     --outline-clr: var(--clr-light);
     --bg-clr: transparent;
     --padding-block: var(--space-200);
@@ -50,11 +50,32 @@ h2 {
     &:is(:hover, :focus-visible) {
         opacity: .9;
     }
+} */
+
+/* .btn {
+    @include u.btn;
+} */
+
+/* .btn__secondary {
+    &:is(:hover, :focus-visible) {
+        --bg-clr: var(--clr-light);
+        color: var(--bg-2);
+    }
+} */
+
+.btn__primary {
+    @include u.btn(var(--clr-accent), var(--clr-accent), var(--clr-dark));
+
+    &:is(:hover, :focus-visible) {
+        opacity: .9;
+    }
 }
 
 .btn__secondary {
+    @include u.btn;
+
     &:is(:hover, :focus-visible) {
-        --bg-clr: var(--clr-light);
+        background-color: var(--clr-light);
         color: var(--bg-2);
     }
 }
