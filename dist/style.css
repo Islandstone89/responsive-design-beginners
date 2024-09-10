@@ -495,6 +495,10 @@ h2 {
   }
 }
 
+.fw-cta__text {
+  font-size: clamp(var(--fs-600), 1.43rem + 0.35vw, var(--fs-700));
+}
+
 /* .fw-cta__link {
     --flow-space: var(--space-600);
     background-color: var(--clr-light);
