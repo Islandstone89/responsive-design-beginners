@@ -21,14 +21,9 @@
 
 .header {
     background-color: var(--bg-2);
-    padding-block: 12px;
     text-transform: uppercase;
     font-size: clamp(var(--fs-100), 0.84rem + 0.18vw, var(--fs-200));
     letter-spacing: .05em;
-
-    @include u.breakpoint(large) {
-        padding-block: 20px;
-    }
 }
 
 .logo {
@@ -44,11 +39,12 @@
     }
 }
 
-.topnav {
+.header__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    padding-block: var(--space-500);
 }
 
 .navbar__list {

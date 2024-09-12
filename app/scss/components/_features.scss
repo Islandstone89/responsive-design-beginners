@@ -5,11 +5,11 @@
 .features__wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-600);
+    gap: var(--space-700);
 
     @include u.breakpoint(large) {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--space-800);
+        gap: var(--space-900);
     }
 }
 

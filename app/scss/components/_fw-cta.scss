@@ -27,7 +27,7 @@
 } */
 
  .fw-cta__link {
-    --flow-space: var(--space-600);
+    --flow-space: var(--space-700);
     @include u.btn(var(--clr-light), var(--clr-light), var(--clr-dark));
 
     &:is(:hover, :focus-visible) {

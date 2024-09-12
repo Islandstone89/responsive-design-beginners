@@ -41,20 +41,20 @@ $breakpoints: (
 
 .wrapper {
     --max-width: 75rem;
-    --padding-inline: var(--space-200);
-    --padding-block: var(--space-700);
+    --padding-inline: var(--space-300);
+    --padding-block: var(--space-800);
     width: min(100% - var(--padding-inline) * 2, var(--max-width));
     margin-inline: auto;
     padding-block: var(--padding-block);
 
     @include breakpoint(medium) {
-        --padding-inline: var(--space-500);
-        --padding-block: var(--space-800);
+        --padding-inline: var(--space-600);
+        --padding-block: var(--space-900);
     }
 }
 
 .flow {
-    --flow-space: var(--space-400);
+    --flow-space: var(--space-500);
 }
 
 .flow > * + * {
