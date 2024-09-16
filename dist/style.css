@@ -414,6 +414,10 @@ h2 {
   }
 }
 
+.features__heading {
+  font-size: var(--fs-600);
+}
+
 .features__text {
   max-width: 42ch;
 }
